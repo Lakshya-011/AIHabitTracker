@@ -1,4 +1,4 @@
-import HabitLog from '../models/HabiLog.js';
+import HabitLog from '../models/HabitLog.js';
 import Habit from '../models/Habit.js';
 
 import {
@@ -31,7 +31,7 @@ export const markComplete = async (req, res) => {
     }
 };
 
-const unmarkComplete = async (req, res) => {    
+export const unmarkComplete = async (req, res) => {    
 try {
         const { habitId, date } = req.body;
         const completedDate = date || todayKey();
