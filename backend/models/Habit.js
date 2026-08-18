@@ -40,3 +40,6 @@ const habitSchema = new mongoose.Schema(
     },
     { timestamps: true }
 );    
+
+export const HABIT_CATEGORIES = CATEGORIES;
+export default mongoose.model("Habit", habitSchema);
