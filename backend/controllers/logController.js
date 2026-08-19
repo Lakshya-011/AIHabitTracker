@@ -125,7 +125,7 @@ export const getHabitStats = async(req,res)=> {
         }
         res.json({
             habit,
-            totalCompletions: log.length,
+            totalCompletions: logs.length,
             currentStreak: current,
             longestStreak: longest,
             completionRate,
@@ -153,7 +153,7 @@ export const getAllStats = async (req, res) => {
                 icon: h.icon,
                 color: h.color,
                 category: h.category,
-                completions30d: hLogs.lenght,
+                completions30d: hLogs.length,
                 currentStreak: current,
                 longestStreak: longest,
             };

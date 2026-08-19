@@ -27,7 +27,7 @@ export const lastNDays = (n) => {
     return eachDayOfInterval({ start, end }).map(toDateKey);
 };
 
-export const calcStreak = (habitLogs) => {
+export const calcStreak = (sortedDateKeys) => {
     if (!sortedDateKeys.length) {
         return {current: 0, longest: 0};
     }   
