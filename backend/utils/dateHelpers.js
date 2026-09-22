@@ -5,7 +5,7 @@ export const toDateKey = (date) => {
 }
 
 export const todayKey = () => {
-    toDateKey(new Date());
+    return toDateKey(new Date());
 }
 
 export const last90Days = () => {
