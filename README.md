@@ -13,49 +13,35 @@ The application provides habit management, completion tracking, streak calculati
 
 ### 🏠 Dashboard
 
-<!-- Add Dashboard screenshot here -->
-
-![Dashboard Screenshot](./screenshots/dashboard.png)
+![alt text](<snapshots/Screenshot (109).png>)
 
 ---
 
 ### 📋 Habits
 
-<!-- Add Habits page screenshot here -->
-
-![Habits Screenshot](./screenshots/habits.png)
-
+![alt text](<snapshots/Screenshot (110).png>)
 ---
 
 ### 📊 Weekly Insights
 
-<!-- Add Weekly Insights screenshot here -->
-
-![Weekly Insights Screenshot](./screenshots/weekly-insights.png)
+![alt text](<snapshots/Screenshot (111).png>)
 
 ---
 
 ### 🧠 AI Insights
 
-<!-- Add AI Insights screenshot here -->
-
-![AI Insights Screenshot](./screenshots/ai-insights.png)
-
+![alt text](<snapshots/Screenshot (112).png>)
 ---
 
 ### 📈 Statistics
 
-<!-- Add Statistics screenshot here -->
-
-![Statistics Screenshot](./screenshots/statistics.png)
+![alt text](<snapshots/Screenshot (113).png>)
 
 ---
 
 ### ⚙️ Settings
 
-<!-- Add Settings screenshot here -->
-
-![Settings Screenshot](./screenshots/settings.png)
+![alt text](<snapshots/Screenshot (114).png>)
 
 ---
 
