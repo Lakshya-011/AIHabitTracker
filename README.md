@@ -6,10 +6,12 @@ A full-stack AI-powered habit tracking application that helps users build consis
 The application provides habit management, completion tracking, streak calculations, weekly analytics, AI habit suggestions, recovery plans, conversational habit analysis, and personalized morning motivation.
 
 ---
+🔗 Live Demo
+    🌐 Backend (Render): https://aihabittracker-ox0m.onrender.com
+    🌐 Frontend (Vercel): Add your Vercel frontend URL here after    deployment
 
+---
 ## 📸 Application Screenshots
-
-> Add screenshots of your application in the sections below.
 
 ### 🏠 Dashboard
 
