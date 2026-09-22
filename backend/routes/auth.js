@@ -3,7 +3,7 @@ import { register, login, me, updateProfile, } from '../controllers/authControll
 import { protect } from '../middleware/auth.js';
 
 const router = express.Router();
-
+// router.use(protect);
 router.post('/register', register);
 router.post('/login', login);
 router.get('/me', protect, me);

@@ -36,7 +36,7 @@ export default function Sidebar() {
   const save = async () => {
     setSaving(true);
     try {
-      const res = await api.put("/auth/profile", {
+      const res = await api.put("/auth/me", {
         name,
         morningMotivation: morning,
       });

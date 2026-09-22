@@ -96,10 +96,27 @@ export default function Habits() {
     }
   };
 
-  const archive = async (habit) => {
-    const res = await api.put(`/habits/${habit._id}/archive`);
-    setHabits((hs) => hs.map((h) => (h._id === res.data._id ? res.data : h)));
-  };
+  // const archive = async (habit) => {
+  //   const res = await api.put(`/habits/${habit._id}/archive`);
+  //   setHabits((hs) => hs.map((h) => (h._id === res.data._id ? res.data : h)));
+  // };
+  const toggleArchive = async (habit) => {
+  try {
+    const res = habit.isArchived
+      ? await api.put(`/habits/${habit._id}`, {
+          isArchived: false,
+        })
+      : await api.put(`/habits/${habit._id}/archive`);
+
+    setHabits((hs) =>
+      hs.map((h) =>
+        h._id === res.data._id ? res.data : h
+      )
+    );
+  } catch (err) {
+    console.error("Failed to update archive status:", err);
+  }
+};
 
   const remove = async (habit) => {
     await api.delete(`/habits/${habit._id}`);
@@ -303,7 +320,8 @@ export default function Habits() {
                   </button>
                   <button
                     className="btn-ghost p-2"
-                    onClick={() => archive(h)}
+                    // onClick={() => archive(h)}
+                    onClick={() => toggleArchive(h)}
                     title={h.isArchived ? "Unarchive" : "Archive"}
                   >
                     {h.isArchived ? (

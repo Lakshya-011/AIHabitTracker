@@ -10,7 +10,7 @@ const getClient = () =>{
     return client;
 };
 
-const MODEL= process.env.GEMINI_MODEL || "gemini-2.5-flash";
+const MODEL= process.env.GEMINI_MODEL || "gemini-3.6-flash";
 
 export const isAIEnabled = () => !!process.env.GEMINI_API_KEY;
 
@@ -28,7 +28,6 @@ export const parseJSON = (text) => {
 export const chatCompletion = async ({
     system,
     user,
-    temperature = 0.7,
 }) => {
     const c = getClient();
 
@@ -45,7 +44,6 @@ export const chatCompletion = async ({
             contents: user,
             config: {
                 systemInstruction: system,
-                temperature,
             }
         });
         return { ok:true, content : (res.text || "").trim()};

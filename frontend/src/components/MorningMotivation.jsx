@@ -16,13 +16,26 @@ export default function MorningMotivation() {
     const seen = localStorage.getItem("morning-seen");
     if (seen === today) return;
     setLoading(true);
+    // api
+    //   .get("/ai/morning")
+    //   .then((res) => {
+    //     setContent(res.data.content);
+    //     localStorage.setItem("morning-seen", today);
+    //   })
+    //   .finally(() => setLoading(false));
     api
-      .get("/ai/morning")
-      .then((res) => {
+    .get("/ai/morning")
+    .then((res) => {
         setContent(res.data.content);
         localStorage.setItem("morning-seen", today);
-      })
-      .finally(() => setLoading(false));
+    })
+    .catch((err) => {
+        console.error(
+            "Morning motivation failed:",
+            err.response?.data || err.message
+        );
+    })
+    .finally(() => setLoading(false));
   }, [user?.morningMotivation]);
 
   if (!user?.morningMotivation || dismissed || (!content && !loading))

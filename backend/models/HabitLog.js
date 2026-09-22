@@ -14,7 +14,7 @@ const habitLogSchema = new mongoose.Schema(
             required: true,
             index: true,
         },
-        completedDate: { type: Date, required: true, },
+        completedDate: { type: String, required: true, },
         notes: { type: String, default: "", },
     },
     { timestamps: true }

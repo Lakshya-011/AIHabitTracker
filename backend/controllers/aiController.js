@@ -228,7 +228,7 @@ export const morningMotivation = async (req, res) => {
     try {
         const habits = await Habit.find({
             userId: req.user._id,
-            isArchived: false,
+            // isArchived: false,
         });
 
         if (!habits.length) {
@@ -259,7 +259,6 @@ export const morningMotivation = async (req, res) => {
         const { content } = await chatCompletion({
             system: SYSTEM_PROMPTS.morning,
             user: userMsg,
-            temperature: 0.8,
         });
 
         await AIInsight.create({
